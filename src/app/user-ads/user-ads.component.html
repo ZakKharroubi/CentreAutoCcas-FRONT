@@ -1,0 +1,27 @@
+<p>user-ads works!</p>
+<div *ngFor="let garage of garages">
+  <h1 class="text-center">{{garage.name}}</h1>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Voir</th>
+        <th scope="col">Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars">
+        <th scope="row">{{car.id}}</th>
+        <th>{{car.title}}</th>
+        <th><button class="btn btn-warning">Voir</button></th>
+        <th><button class="btn btn-danger">Supprimer</button> </th>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+
+<div class="text-center">
+  <a routerLink="/cars/add" class="text-center"><button class="btn btn-success">Ajouter une annonce</button></a>
+</div>

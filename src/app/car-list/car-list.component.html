@@ -1,0 +1,8 @@
+<div class="container">
+  <app-search-bar></app-search-bar>
+
+  <h2>Annonces récentes :</h2>
+  <div class="row">
+    <app-car *ngFor="let c of cars" [car]="c" class="col-4"></app-car>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.401), rgba(0, 0, 0, 0.4)),
+    url(../assets/img/driving-2732934_1280.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 45px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+header h2 {
+  padding-bottom: 100px;
+}
+
+
+
+
+footer {
+  background-color: black;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+footer a {
+  color: white;
+}
+
+footer ul {
+  margin-bottom: 0;
+  padding: 20px 150px;
+}
+
+footer nav ul li {
+  list-style: none;
+}
+button {
+  background-color: rgba(255, 0, 0, 1);
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  border: none;
+}

@@ -1,0 +1,26 @@
+nav {
+  background-color: white;
+  border: 1px solid black;
+  font-size: 20px;
+  font-weight: 700;
+}
+nav a {
+  color: black;
+  font-weight: bold;
+}
+nav img {
+  height: 70px;
+  width: auto;
+}
+nav ul li {
+  list-style: none;
+}
+
+button {
+  background-color: rgba(255, 0, 0, 1);
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  border: none;
+}
+

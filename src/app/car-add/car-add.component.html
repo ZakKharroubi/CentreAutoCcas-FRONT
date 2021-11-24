@@ -1,0 +1,75 @@
+<div class="container">
+<h2> Ajouter une annonce</h2>
+
+
+  <div class="form-group">
+    <label for="adBrand">Marque de votre véhicule</label>
+    <select id="adBrand" class="form-control" name="adBrand" [(ngModel)]="brand" (change)="onChange()" >
+      <option *ngFor="let brand of brands" value="{{brand['id']}}">{{brand['name']}}</option>
+    </select>
+  </div>
+<form method="post" [formGroup]="addAdForm" (ngSubmit)="addAd()">
+
+  <div class="form-group">
+    <label for="adGarage">Choix du garage</label>
+    <select id="adGarage" class="form-control" name="adGarage" formControlName="garage">
+      <option value="">Choisissez un garage</option>
+      <option *ngFor="let garage of garages" value="{{garage['id']}}">{{garage['name']}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for ="adModel">Modèle de votre véhicule</label>
+    <select id="adModel" class="form-control" name="adModel" formControlName="model">
+      <option value="">Choisissez un modèle</option>
+      <option *ngFor="let model of models" value="{{model['id']}}">{{model['name']}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="adTitle">Titre de votre annonce</label>
+    <input type="text" name="adTitle" id="adTitle" class="form-control" formControlName="title">
+  </div>
+
+
+
+
+  <div class="form-group">
+    <label for="adYear"> Année de mise en circulation </label>
+    <input type="date" id="adYear" class="form-control" name="adYear" formControlName="year">
+  </div>
+
+  <div>
+    <label for="adFuel"> Type de carburant </label>
+    <select id="adFuel" class="form-control" name="adFuel" formControlName="fuel">
+      <option value="">Choisissez un type de carburant</option>
+      <option *ngFor="let fuel of fuels" value="{{fuel['id']}}">{{fuel['name']}}</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="adKilometers"> Kilométrage</label>
+    <input type="number" id="adKilometers" class="form-control" name="adKilometers" formControlName="kilometers">
+  </div>
+
+  <div>
+    <label for="adPrice"> Prix</label>
+    <input type="number" id="adPrice" class="form-control" name="adPrice" formControlName="price">
+  </div>
+
+  <div>
+    <label for="adDescription">Description</label>
+    <textarea class="form-control" id="adDescription" name="adDescription" formControlName="description"></textarea>
+  </div>
+
+  <div>
+    <label for="adPhoto">Photo</label>
+    <input type="text" formControlName="photo" id="adPhoto" name="adPhoto" class="form-control">
+  </div>
+
+  <div class="text-center my-5">
+    <input type="submit" value="Ajouter l'annonce" class="btn btn-success rounded-pill">
+  </div>
+
+</form>
+</div>

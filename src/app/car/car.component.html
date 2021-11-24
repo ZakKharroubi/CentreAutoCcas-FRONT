@@ -1,0 +1,11 @@
+<section id="recentlyadded">
+  <ul class="shadow p-3 mb-5 bg-white rounded">
+    <h4>{{car.title}}</h4>
+    <li class="font-weight-bold">{{car.model.brand.name}} {{car.model.name}}  </li>
+  <!--  <li> <img src="{{car.photo[0]}}" alt="piccar"> </li> -->
+    <li class="font-weight-bold"> {{car.price}} € </li>
+    <hr>
+    <li> {{car.description}} </li>
+    <li><button class="px-5 py-2"><a [routerLink]="['/cars', car.id]" id="car-details">  Plus d'infos   </a></button></li>
+  </ul>
+</section>

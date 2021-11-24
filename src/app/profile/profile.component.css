@@ -1,0 +1,15 @@
+fa-icon{
+  font-size: 40px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.profile-box{
+  background: black;
+  color: white;
+}
+
+.container {
+  margin-bottom: 200px;
+}

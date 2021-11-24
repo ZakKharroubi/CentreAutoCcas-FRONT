@@ -1,0 +1,24 @@
+<div class="container py-3">
+  <p> Annonce n°{{car['id']}}</p>
+<h1> {{car.title}} </h1>
+
+<!-- Ici faudra mettre un ensemble de photos dès que c'est prêt -->
+
+
+<h2 class="py-5"> Description </h2>
+
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<h3 class="py-5"> Caractéristiques</h3>
+
+  <h4 class="py-2 text-center"> {{car.model.brand.name}} {{car.model.name}}</h4>
+
+<ul class="list-group py-5">
+  <li class="py-2 list-group-item"><fa-icon [icon]="faCalendar"></fa-icon> Année de mise en circulation : <b>{{car.year}}</b>  </li>
+  <li class="py-2 list-group-item"><fa-icon [icon]="faTachometerAlt"></fa-icon> Kilométrage : <b>{{car.kilometers}} km </b></li>
+  <li class="py-2 list-group-item"><fa-icon [icon]="faCoins"></fa-icon> Prix : <b> {{car.price}} €</b></li>
+  <li class="py-2 list-group-item"><fa-icon [icon]="faGasPump"></fa-icon> Type de carburant : <b> <span class="text-capitalize">{{car.fuel['name']}}</span> </b></li>
+</ul>
+  <div class="text-center">
+     <button class="px-5 py-2">Je suis intéressé !</button>
+  </div>
+</div>

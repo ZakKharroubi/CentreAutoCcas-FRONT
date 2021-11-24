@@ -1,0 +1,13 @@
+<div>
+  <nav class="d-flex justify-content-between align-items-center px-5">
+    <a href="#"> <img src="../assets/img/CENTRE'AUTO'CAS-rogne.png" alt="logocac"> </a>
+    <ul class="d-flex">
+      <li class="ml-5"> <a routerLink='/cars'> Accueil</a></li>
+      <li class="ml-5"> <a href="">Guide</a> </li>
+      <li class="ml-5"> <a href="">Contact</a> </li>
+      <li class="ml-5"> <a routerLink="login" [ngStyle]="{'display': isLoggedIn? 'none' : 'block'}"> <button>Connexion</button></a></li>
+      <li> <a routerLink="login" [ngStyle]="{'display': isLoggedIn? 'block' : 'none'}"> <button (click)="logout()">Déconnexion</button></a></li>
+      <li class="ml-5"> <a routerLink="profile" [ngStyle]="{'display' : isLoggedIn? 'block' : 'none'}"><button>Mon profil</button></a></li>
+    </ul>
+  </nav>
+</div>

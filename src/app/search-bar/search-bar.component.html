@@ -1,0 +1,54 @@
+<section id="searchbar" class="my-5 mx-2 p-5">
+  <div class="row">
+    <h3 class="col-3">Rechercher <i class="fas fa-search"></i>
+    </h3>
+
+<!-- Choix de la marque -->
+    <div class="form-group col-4 mb-5">
+      <label for="brand" class="row">Marque</label>
+      <select name="brand" id="brand" class="col-12 form-control" [(ngModel)]="brand" (change)="brandIsSelected()">
+        <option *ngFor="let brand of brands" value="{{brand['id']}}">{{brand['name']}}</option>
+      </select>
+    </div>
+
+
+    <form action="#" class="col-9" [formGroup]="searchForm">
+      <ul class="row">
+
+        <li class="col-4 mb-5">
+          <label for="model" class="row">Modèle</label>
+          <select name="model" id="model" class="col-12 form-control" formControlName="models">
+            <option *ngFor="let model of models" value="{{model['id']}}">{{model['name']}}</option>
+          </select>
+        </li>
+        <li class="col-4 mb-5">
+          <label for="gas" class="row">Carburant</label>
+          <select name="gas" id="gas" class="col-12 form-control" formControlName="fuels">
+            <option value="default">Choisissez un carburant</option>
+          </select>
+        </li>
+        <li class="col-4 mb-5">
+          <label for="price" class="row">Prix</label>
+          <div class="custom-slider">
+            <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>
+          </div>
+        </li>
+        <li class="col-4 mb-5">
+          <label for="year" class="row">Année</label>
+          <div class="custom-slider">
+            <ngx-slider [(value)]="value1" [(highValue)]="highValue1" [options]="options1"></ngx-slider>
+          </div>
+        </li>
+        <li class="col-4 mb-5">
+          <label for="kms" class="row">Kilométrage</label>
+          <div class="custom-slider">
+            <ngx-slider [(value)]="value2" [(highValue)]="highValue2" [options]="options2"></ngx-slider>
+          </div>
+        </li>
+      </ul>
+      <button class="row px-5 py-2" id="searchbtn">Lancer la recherche >></button>
+    </form>
+  </div>
+
+
+</section>
